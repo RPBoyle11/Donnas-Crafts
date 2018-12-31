@@ -9,7 +9,8 @@ class Items extends React.Component {
       collection: null,
       onSale: false,
       inCart: false,
-      onWishList: false
+      onWishList: false,
+      productType: ''
     }
   }
 
