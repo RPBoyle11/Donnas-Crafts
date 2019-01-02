@@ -8,3 +8,5 @@ module.exports = {
   JWT_EXPIRY: process.env.JWT_EXPIRY || '7d'
 };
 
+export const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:8080';
+

@@ -13,6 +13,9 @@ class Main extends Component {
 
   }
 
+  // addToCart(e) {
+
+  // }
 
 
   render() {
