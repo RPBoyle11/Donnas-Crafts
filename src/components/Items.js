@@ -1,12 +1,12 @@
 import React from 'react';
 import { Component } from 'react';
-import './items.css'
+import './Items.css'
 
 class Items extends React.Component {
   constructor(props) {
     super(props)
     const initialState = {
-      collection: null,
+      theme: null,
       onSale: false,
       inCart: false,
       onWishList: false,
