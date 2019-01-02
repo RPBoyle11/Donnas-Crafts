@@ -2,7 +2,19 @@ import React from 'react';
 import { Component } from 'react';
 import Items from './Items';
 
-class Main extends React.Component {
+class Main extends Component {
+  constructor(props) {
+    super(props)
+
+    const initialState = {
+      cart: [],
+      wishList: []
+    }
+
+  }
+
+
+
   render() {
     return (
       <div className="App">
