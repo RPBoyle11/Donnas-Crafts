@@ -7,6 +7,7 @@ const Item = require('../models/item');
 const { items } = require('../db/data');
 
 console.log(`Connecting to mongodb at ${MONGODB_URI}`);
+
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
   .then(() => {
     console.info('Delete Data');

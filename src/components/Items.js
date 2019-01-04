@@ -1,17 +1,43 @@
 import React from 'react';
 import { Component } from 'react';
 import './Items.css'
+const {API_BASE_URL} = require('../config');
 
 class Items extends React.Component {
+//   export const fetchUserProfile = (userid) => dispatch => {
+//     fetch(`${API_BASE_URL}/users/${userId}`).then(res => {
+//         if (!res.ok) {
+//             return Promise.reject(res.statusText);
+//         }
+//         return res.json();
+//     }).then(userProfile => {
+//         dispatch(fetchUserProfileSuccess(userProfile));
+//     }).catch(err => dispatch(fetchUserProfileError(err)));
+// };
+
   constructor(props) {
     super(props)
-    const initialState = {
+    const state = {
       theme: null,
       onSale: false,
       inCart: false,
       onWishList: false,
       productType: ''
     }
+  }
+
+  handleCartClick() {
+    console.log('Added to Cart')
+    // this.setState = {inCart: true};
+    // if (this.state.inCart === true) {
+    //   return (
+    //     console.log(this.state.inCart)
+    //   )
+    //   }
+  }
+
+  handleWishlistClick() {
+    console.log('Add to wishlist');
   }
 
   render() {
@@ -21,8 +47,8 @@ class Items extends React.Component {
         <h1 className='item-name'>Bless This Home - Wreath</h1>
         <h2 className='item-price'>Price: $50.00</h2>
         <div className='item-buttons'>
-          <button className='add-to-cart'>Add to Cart</button>
-          <button className='add-to-wishlist'>Add to Wish List</button>
+          <button className='add-to-cart' onClick={()=>this.handleCartClick()}>Add to Cart</button>
+          <button className='add-to-wishlist' onClick={()=>this.handleWishlistClick()}>Add to Wish List</button>
         </div>
       </div>
     )

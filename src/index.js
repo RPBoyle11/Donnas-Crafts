@@ -1,9 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
-import Main from './components/Main';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+import {Provider} from 'react-redux';
+import {BrowserRouter as Router} from 'react-router-dom';
+import store from './store';
+import Home from './components/Home';
+import App from './components/App';
 
-serviceWorker.unregister();
+ReactDOM.render(
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>,
+  document.getElementById('root'));
