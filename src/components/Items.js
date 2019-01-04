@@ -22,9 +22,44 @@ class Items extends React.Component {
       onSale: false,
       inCart: false,
       onWishList: false,
-      productType: ''
+      productType: '',
+      itemList: []
     }
   }
+
+  componentDidMount() {
+    console.log('Items mounted');
+    console.log(this.state);
+    this.loadItems();
+  }
+
+  loadItems() {
+    this.setState({
+     error: null,
+     loading: true
+    });
+     fetch(`${API_BASE_URL}/items`)
+      .then(res => {
+        if (!res.ok) {
+          return Promise.reject(res.statusText);
+        }
+        return res.json();
+      })
+      .then(itemList => {
+        console.log(itemList)
+        this.setState({
+          itemList: itemList,
+          loading: false
+        })
+        console.log(this.state);
+      })
+      .catch(err => {
+        this.setState({
+          error: 'Could not load items',
+          loading: false
+        })
+      });
+   } 
 
   handleCartClick() {
     console.log('Added to Cart')
