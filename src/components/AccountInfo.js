@@ -2,11 +2,9 @@ import React from 'react';
 import { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Items from './Items';
-import ShoppingCart from './buttons/ShoppingCart';
-import Account from './buttons/Account';
-import Menu from './buttons/Menu';
-import Search from './buttons/Search';
+import Nav from './Nav';
 import './AccountInfo.css';
+import Footer from './Footer';
 
 class AccountInfo extends Component {
 
@@ -17,13 +15,7 @@ class AccountInfo extends Component {
   render() {
     return (
         <div className="App">
-          <nav className="App-header">
-            <Menu />
-            <Search />
-            <h1 className='donnas-title'><a className='title-anchor' href='/'>Donna's Crafts and Creations</a></h1>
-            <Account />
-            <ShoppingCart />
-          </nav>
+          <Nav />
           <div className='shopping-cart-header'>
             <p>Account Info</p>
             <p>We value our returning customers and appreciate you creating an account with us.</p>
@@ -39,6 +31,7 @@ class AccountInfo extends Component {
               <button className='remove-from-cart' onClick={()=>this.handleRemoveClick()}>Remove from Cart</button>
             </div>
           </div>
+          <Footer />
         </div>
     );
   }

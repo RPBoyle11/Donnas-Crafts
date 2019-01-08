@@ -2,10 +2,6 @@ import React from 'react';
 import { Component } from 'react';
 
 class Account extends React.Component {
-  
-  handleClick() {
-    
-  }
 
   render() {
     return (

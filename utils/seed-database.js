@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
-
 const { MONGODB_URI } = require('../config');
-
 const Item = require('../models/item');
-
 const { items } = require('../db/data');
 
 console.log(`Connecting to mongodb at ${MONGODB_URI}`);
