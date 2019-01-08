@@ -1,5 +1,5 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Items from './Items';
 import Nav from './Nav';
@@ -7,25 +7,24 @@ import Footer from './Footer';
 import './Home.css';
 
 class Home extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      itemsList: [],
-      cart: [],
-      wishList: []
-    }
-  }
 
   render() {
     return (
         <div className="App">
           <Nav />
-          <Items />
+          <ul className='item-list'>
+            <Items /> 
+          </ul>
           <Footer />
         </div>
     );
   }
 }
 
-export default Home;
+const mapStateToProps = state => {
+  return {
+    items: state.itemReducer.items
+  }
+}
+
+export default connect(mapStateToProps)(Home);

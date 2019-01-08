@@ -16,7 +16,7 @@ code {
 
 nav {
   text-align: center;
-  background: beige;
+  /* background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/04/62/71/3558707233e44c3.jpg); */
 }
 
 h1 {
@@ -38,5 +38,5 @@ img {
 footer {
   text-align: center;
   font-weight: bold; 
-  background: beige;
+  /* background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/04/62/71/3558707233e44c3.jpg); */
 }
