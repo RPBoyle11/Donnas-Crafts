@@ -1,16 +1,12 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
+import './ShoppingCart.css';
 
-class ShoppingCart extends React.Component {
-  handleClick() {
-
-  }
-
+class ShoppingCart extends Component {
 
   render() {
     return (
       <a href='/shopping-cart'>
-        <button onClick={()=>this.handleClick()} className='shoppingCart-button'>Shopping Cart</button>
+        <button className='shoppingCart-button'>Shopping Cart</button>
       </a>
     )
   }

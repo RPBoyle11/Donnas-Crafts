@@ -2,23 +2,45 @@ ul {
   list-style-type: none;
 }
 
+li {
+  display: inline-block;
+  width: 30%;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+/* .item-div {
+  display: inline-block;
+} */
+
 .item-name {
   position: absolute;
   display: inline-block;
   margin: 0;
+  padding-left: 30px;
+  font-size: 18px;
 
 }
 
 .item-price {
   position: absolute;
   display: inline-block;
-  margin-top: 30px;
-  padding: 30px;
+  margin: 0;
+  padding-top: 60px;
+  padding-left: 30px;
+  font-size: 14px;
 }
 
 .item-buttons {
   display: inline-block;
   position: absolute;
-  padding: 30px;
-  margin-top: 60px;
+  padding-left: 30px;
+  margin-top: 90px;
+}
+
+h1 {
+  display: inline-block;
+  padding-left: 30px;
+  padding-top: 30px;
+  font-size: 25px;
 }

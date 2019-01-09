@@ -20,7 +20,7 @@ class Nav extends Component {
           <nav className="App-header">
             <Menu />
             <Search />
-            <h1 className='donnas-title'><a className='title-anchor' href='/'>Donna's Crafts and Creations</a></h1>
+            <h1 className='page-title'><a className='title-anchor' href='/'>Donna's Crafts 'N Creations</a></h1>
             <Account />
             <ShoppingCart />
           </nav>

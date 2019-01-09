@@ -1,0 +1,11 @@
+footer {
+  background: rgba(4, 4, 141, 0.753);
+  color: white;
+  border-top: 2px black solid;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

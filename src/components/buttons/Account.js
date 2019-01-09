@@ -1,12 +1,11 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 
-class Account extends React.Component {
+class Account extends Component {
 
   render() {
     return (
       <a href='/account-info'>
-      <button onClick={()=>this.handleClick()}>Account Information</button>
+      <button>Account Information</button>
     </a>
     )
   }

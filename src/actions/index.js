@@ -42,8 +42,26 @@ export const fetchItemsSuccess = (items) => ({
 })
 
 export const FETCH_ITEMS_ERROR = 'FETCH_ITEMS_ERROR';
-export const fetchItemsError = () => ({
-  type: FETCH_ITEMS_ERROR
+export const fetchItemsError = (error) => ({
+  type: FETCH_ITEMS_ERROR,
+  error: error
+})
+
+export const ADD_TO_CART_REQUEST = 'ADD_TO_CART_REQUEST';
+export const addToCartRequest = () => ({
+  type: ADD_TO_CART_REQUEST
+})
+export const ADD_TO_CART_SUCCESS = 'ADD_TO_CART_SUCCESS';
+export const addToCartSuccess = (items, cart, totalPrice) => ({
+  type: ADD_TO_CART_SUCCESS,
+  cart: cart,
+  totalPrice: totalPrice
+
+})
+export const ADD_TO_CART_ERROR = 'ADD_TO_CART_ERROR';
+export const addToCartError = (error) => ({
+  type: ADD_TO_CART_ERROR,
+  error: error
 })
 
 export default function fetchItems() {
@@ -72,3 +90,57 @@ export default function fetchItems() {
     })
   }
 }
+
+export function addToCart(e) {
+  return dispatch => {
+    dispatch(addToCartRequest())
+
+    fetch(`${API_BASE_URL}/items`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => {
+      if(!res.ok) {
+        return Promise.reject(res.statusText)
+      }
+      const items = res.json();
+      const cart = items.filter(item => item.id === e.id );
+    })
+    .then(items => {
+      dispatch(addToCartSuccess(items))
+    })
+    .catch(error => {
+      dispatch(addToCartError(error))
+    })
+  }
+}
+
+// export function fetchCartItems() {
+
+//   return dispatch => {
+//     dispatch(fetchItemsRequest());
+
+//   fetch(`${API_BASE_URL}/:items`, {
+//     method: 'GET',
+//     headers: {
+//       'Accept': 'application/json',
+//       'Content-Type': 'application/json'
+//     }
+//   })
+//     .then(res => {
+//       if(!res.ok) {
+//         return Promise.reject(res.statusText)
+//       }
+//       return res.json();
+//     })
+//     .then(items => {
+//       dispatch(fetchItemsSuccess(items))
+//     })
+//     .catch(error => {
+//       dispatch(fetchItemsError(error))
+//     })
+//   }
+// }
