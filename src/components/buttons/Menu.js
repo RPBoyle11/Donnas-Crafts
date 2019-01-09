@@ -1,11 +1,12 @@
 import React from 'react';
 import { Component } from 'react';
+import './Menu.css';
 
 class Menu extends React.Component {
   
   render() {
     return (
-    <select>
+    <select className='menu-dropdown'>
       <option value='menu'>Menu</option>
       <option value='holidays' disabled>Shop by Holiday</option>
       <option value='Christmas'>Christmas</option>

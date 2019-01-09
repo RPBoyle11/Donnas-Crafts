@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import fetchItems from '../actions';
-import addToCart from '../actions';
+import fetchItems from '../../actions';
+import addToCart from '../../actions';
 import './Items.css'
-// const {API_BASE_URL} = require('../config');
+import { AddToCart } from './AddToCart';
+import { AddToWishlist } from './AddToWishlist';
 
 export class Items extends Component {
   constructor(props) {
@@ -42,8 +43,8 @@ export class Items extends Component {
       <h1 className='item-name'>{item.title}</h1>
       <h2 className='item-price'>Price: {item.price}</h2>
       <div className='item-buttons'>
-        <button className='add-to-cart' onClick={(e)=>this.handleCartClick(e)}>Add to Cart</button>
-        <button className='add-to-wishlist' onClick={()=>this.handleWishlistClick()}>Add to Wish List</button>
+        <AddToCart />
+        <AddToWishlist />
       </div>
     </li>
     ) 

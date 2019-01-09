@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import Items from './Items';
+import Items from './items/Items';
 import Nav from './Nav';
 import './AccountInfo.css';
 import Footer from './Footer';

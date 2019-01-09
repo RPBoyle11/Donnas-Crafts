@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import Items from './Items';
+import Items from './items/Items.js';
 import Nav from './Nav';
 import Footer from './Footer';
 import './Home.css';
