@@ -72,9 +72,19 @@ class Cart extends Component {
                   <button className='remove-from-cart' onClick={()=>this.handleRemoveClick()}>Remove from Cart</button>
                 </div>
               </div>
-              <a href='/checkout'>
-                <button className='checkout-button'>Checkout</button>
-              </a>
+                <div className='checkout-box'>
+                  <span className='checkout-items-title'>Items</span>
+                  <div className='checkout-items-details'>
+                    <p className='checkout-items'>Bless This Home - Wreath 
+                    <span className='item-quantity'>   1x </span>
+                    <span className='checkout-items-price'> $50.00</span>
+                    </p>
+                    <p className='checkout-total'>Total Price: $50.00</p>
+                  </div>
+                  <a href='/checkout'>
+                    <button className='checkout-button'>Checkout</button>
+                  </a>
+                </div>
             </div>
             <Footer />
           </div>
