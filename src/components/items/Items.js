@@ -10,9 +10,10 @@ export class Items extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      cart: ['example item']
-    }
+    // this.state = {
+    //   cart: ['example item'],
+    //   items: props.items
+    // }
 
     this.handleCartClick = this.handleCartClick.bind(this);
   }
@@ -22,10 +23,10 @@ export class Items extends Component {
     this.props.dispatch(fetchItems());
   }
 
-  handleCartClick(e) {
+  handleCartClick() {
     console.log('Added to Cart')
     console.log(this.props.items);
-    this.props.dispatch(addToCart());
+    // this.props.dispatch(addToCart());
   }
 
   // handleWishlistClick() {
@@ -43,8 +44,8 @@ export class Items extends Component {
       <h1 className='item-name'>{item.title}</h1>
       <h2 className='item-price'>Price: {item.price}</h2>
       <div className='item-buttons'>
-        <AddToCart />
-        <AddToWishlist />
+        <button className='add-to-cart-button' onClick={()=>this.handleCartClick()}>Add to Cart</button>
+        <button className='add-to-wishlist-button' onClick={()=>this.handleWishlistClick()}>Add to Wishlist</button>
       </div>
     </li>
     ) 

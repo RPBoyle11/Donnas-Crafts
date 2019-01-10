@@ -11,7 +11,7 @@ class Cart extends Component {
     super(props)
 
   this.state = {
-      cart: []
+      cart: this.props.cart
     }
   }
 
@@ -95,6 +95,7 @@ class Cart extends Component {
 
 const mapStateToProps = state => {
   return {
+    cart: state.itemReducer.cart
     
   }
 }

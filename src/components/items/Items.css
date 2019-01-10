@@ -12,13 +12,7 @@ ul {
 
 li {
   display: inline-block;
-  /* margin-left: 5px;
-  margin-top: 5px; */
 }
-
-/* .item-div {
-  display: inline-block;
-} */
 
 .item-name {
   position: absolute;
@@ -50,4 +44,24 @@ h1 {
   padding-left: 30px;
   padding-top: 30px;
   font-size: 25px;
+}
+
+.add-to-wishlist-button {
+  border-radius: 8px;
+}
+
+.add-to-cart-button {
+  border-radius: 8px;
+}
+
+.add-to-cart-button:hover {
+  background: navy;
+  color: white;
+  border-radius: 8px;
+}
+
+.add-to-wishlist-button:hover {
+  background: navy;
+  color: white;
+  border-radius: 8px;
 }
