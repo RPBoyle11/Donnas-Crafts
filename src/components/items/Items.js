@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import fetchItems from '../../actions';
-import addToCart from '../../actions';
 import './Items.css'
-import { AddToCart } from './AddToCart';
-import { AddToWishlist } from './AddToWishlist';
 
 export class Items extends Component {
   constructor(props) {
     super(props)
 
-    // this.state = {
-    //   cart: ['example item'],
-    //   items: props.items
-    // }
+    this.state = {
+      cart: ['example item'],
+      items: props.items
+    }
 
     this.handleCartClick = this.handleCartClick.bind(this);
   }
@@ -26,6 +23,7 @@ export class Items extends Component {
   handleCartClick() {
     console.log('Added to Cart')
     console.log(this.props.items);
+    console.log(this.state);
     // this.props.dispatch(addToCart());
   }
 
@@ -57,7 +55,7 @@ export class Items extends Component {
 const mapStateToProps = state => {
   return {
     items: state.itemReducer.items,
-    cart: state.itemReducer.cart
+    cart: 'This is from Items.js'
   }
 }
 

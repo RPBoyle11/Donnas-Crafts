@@ -9,6 +9,8 @@ import './Home.css';
 class Home extends Component {
 
   render() {
+    console.log(this.props.cart);
+ 
     return (
         <div className="App">
           <Nav />
@@ -24,7 +26,8 @@ class Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    items: state.itemReducer.items
+    items: state.itemReducer.items,
+    cart: 'state.Items.cart'
   }
 }
 
