@@ -1,8 +1,8 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './Menu.css';
 
-class Menu extends React.Component {
+class Menu extends Component {
   
   render() {
     return (
@@ -23,4 +23,10 @@ class Menu extends React.Component {
   }
 }
 
-export default Menu;
+const mapStateToProps = state => {
+  return {
+    
+  }
+}
+
+export default connect(mapStateToProps)(Menu);

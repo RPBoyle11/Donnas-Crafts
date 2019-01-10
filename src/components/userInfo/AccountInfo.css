@@ -1,0 +1,32 @@
+.wishList {
+  text-align: center;
+}
+
+.title-anchor {
+  text-decoration: none;
+  color: black;
+}
+
+.login-box {
+  border: 2px solid black;
+  width: 400px;
+  height: 300px;
+  background: white;
+  margin: auto;
+  margin-top: 10%;
+  padding-top: 7%;
+}
+
+.login-button {
+  display: block;
+  margin: auto;
+  padding-top: 1%;
+}
+
+.email-label, .password-label{
+  padding-left: 22%;
+}
+
+/* .login-header {
+  display: inline-block;
+} */

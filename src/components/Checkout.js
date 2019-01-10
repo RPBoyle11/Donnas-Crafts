@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Nav from './Nav';
 import Footer from './Footer';
 
@@ -23,4 +24,10 @@ class Checkout extends Component {
   }
 }
 
-export default Checkout;
+const mapStateToProps = state => {
+  return {
+    
+  }
+}
+
+export default connect(mapStateToProps)(Checkout);

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './Search.css';
 
-class Search extends React.Component {
+class Search extends Component {
   
   handleClick() {
     
@@ -20,6 +20,12 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+const mapStateToProps = state => {
+  return {
+    
+  }
+}
+
+export default connect(mapStateToProps)(Search);
 
 

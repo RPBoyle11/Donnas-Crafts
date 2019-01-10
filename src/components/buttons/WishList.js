@@ -1,10 +1,10 @@
- import React from 'react';
-import { Component } from 'react';
+ import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
-class WishList extends React.Component {
+class WishList extends Component {
   constructor(props) {
     super(props)
-    const initialState = {
+    this.state = {
       items: [],
     }
   }
@@ -13,4 +13,10 @@ class WishList extends React.Component {
   }
 }
 
-export default WishList;
+const mapStateToProps = state => {
+  return {
+    
+  }
+}
+
+export default connect(mapStateToProps)(WishList);

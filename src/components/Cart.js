@@ -1,9 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
+import { connect } from 'react-redux';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Nav from './Nav';
 import Footer from './Footer';
-// import Items from './Items';
 import './Cart.css';
 
 class Cart extends Component {
@@ -93,4 +93,10 @@ class Cart extends Component {
   }
 }
 
-export default Cart;
+const mapStateToProps = state => {
+  return {
+    
+  }
+}
+
+export default connect(mapStateToProps)(Cart);

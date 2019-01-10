@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import './ShoppingCart.css';
 
 class ShoppingCart extends Component {
@@ -12,4 +13,10 @@ class ShoppingCart extends Component {
   }
 }
 
-export default ShoppingCart;
+const mapStateToProps = state => {
+  return {
+    
+  }
+}
+
+export default connect(mapStateToProps)(ShoppingCart);

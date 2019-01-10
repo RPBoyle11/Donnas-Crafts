@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Account extends Component {
 
@@ -11,4 +12,10 @@ class Account extends Component {
   }
 }
 
-export default Account;
+const mapStateToProps = state => {
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps)(Account);
