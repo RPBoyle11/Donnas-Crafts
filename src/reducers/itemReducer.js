@@ -29,23 +29,23 @@ export const itemReducer = (state=initialState, action) => {
       error: action.error
     })
 
-    case ADD_TO_CART_REQUEST :
-    return Object.assign({}, state, {
-      loading: true
-    })
+    // case ADD_TO_CART_REQUEST :
+    // return Object.assign({}, state, {
+    //   loading: true
+    // })
 
-    case ADD_TO_CART_SUCCESS :
-    return Object.assign({}, state, {
-      loading: false,
-      cart: action.cart,
-      totalPrice: action.totalPrice
-    })
+    // case ADD_TO_CART_SUCCESS :
+    // return Object.assign({}, state, {
+    //   loading: false,
+    //   cart: action.cart,
+    //   totalPrice: action.totalPrice
+    // })
 
-    case ADD_TO_CART_ERROR :
-    return Object.assign({}, state, {
-      loading: false,
-      error: action.error
-    })
+    // case ADD_TO_CART_ERROR :
+    // return Object.assign({}, state, {
+    //   loading: false,
+    //   error: action.error
+    // })
 
     default: return state
   }

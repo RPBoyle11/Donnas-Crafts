@@ -1,18 +1,24 @@
 import React from 'react';
 import { Component } from 'react';
 import { connect } from 'react-redux';
+import myObject from '../actions';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Nav from './Nav';
 import Footer from './Footer';
 import './Cart.css';
 
 class Cart extends Component {
-  constructor(props) {
-    super(props)
+  // constructor(props) {
+  //   super(props)
 
-  this.state = {
-      cart: this.props.cart
-    }
+  // this.state = {
+  //     cart: this.props.cart
+  //   }
+  // }
+
+  componentDidMount() {
+    console.log('Items component loaded');
+    this.props.dispatch(myObject.fetchItems());
   }
 
   handleRemoveClick() {
@@ -21,7 +27,7 @@ class Cart extends Component {
 
   render() {
 
-    console.log(this.state.cart);
+    // console.log(this.state.cart);
 
     // if(this.state.cart.length === 0) {
     //   return (
@@ -95,7 +101,7 @@ class Cart extends Component {
 
 const mapStateToProps = state => {
   return {
-    cart: state.itemReducer.cart
+    cart: 'state.Items.cart'
     
   }
 }

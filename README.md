@@ -8,3 +8,17 @@ This is a retail site for people that have a love for creative crafts can go and
 1. User can search through all of the available items that the store has to offer.
 2. User can add items to a shopping cart so that you can keep track of all the items you wish to buy.
 3. User can checkout on this site and pay with either Paypal now, or Venmo later (items will not be sent to owners until payment has been received)
+
+### File Tree
+
+|--node_modules
+|--.env
+|--.gitignore
+|--package-lock.json
+|--package.json
+|--README.md
+|--public
+|   |--index.html
+|   |--manifest.json
+|   |--favicon.ico
+|--src

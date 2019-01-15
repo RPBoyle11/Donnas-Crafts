@@ -20,9 +20,16 @@ export const shoppingCartClicked = () => ({
   type: SHOPPING_CART_CLICKED 
 })
 
-export const ADD_TO_CART_CLICKED = 'ADD_TO_CART_CLICKED';
-export const addToCartClicked = () => ({
-  type: ADD_TO_CART_CLICKED 
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const addToCart = (id) => ({
+  type: ADD_TO_CART,
+  id,
+})
+
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+export const removeFromCart = (id) => ({
+  type: REMOVE_FROM_CART,
+  id
 })
 
 export const ADD_TO_WISHLIST_CLICKED = 'ADD_TO_WISHLIST_CLICKED';
@@ -47,24 +54,24 @@ export const fetchItemsError = (error) => ({
   error: error
 })
 
-export const ADD_TO_CART_REQUEST = 'ADD_TO_CART_REQUEST';
-export const addToCartRequest = () => ({
-  type: ADD_TO_CART_REQUEST
-})
-export const ADD_TO_CART_SUCCESS = 'ADD_TO_CART_SUCCESS';
-export const addToCartSuccess = (items, cart, totalPrice) => ({
-  type: ADD_TO_CART_SUCCESS,
-  cart: cart,
-  totalPrice: totalPrice
+// export const ADD_TO_CART_REQUEST = 'ADD_TO_CART_REQUEST';
+// export const addToCartRequest = () => ({
+//   type: ADD_TO_CART_REQUEST
+// })
+// export const ADD_TO_CART_SUCCESS = 'ADD_TO_CART_SUCCESS';
+// export const addToCartSuccess = (items, cart, totalPrice) => ({
+//   type: ADD_TO_CART_SUCCESS,
+//   cart: cart,
+//   totalPrice: totalPrice
 
-})
-export const ADD_TO_CART_ERROR = 'ADD_TO_CART_ERROR';
-export const addToCartError = (error) => ({
-  type: ADD_TO_CART_ERROR,
-  error: error
-})
+// })
+// export const ADD_TO_CART_ERROR = 'ADD_TO_CART_ERROR';
+// export const addToCartError = (error) => ({
+//   type: ADD_TO_CART_ERROR,
+//   error: error
+// })
 
-export default function fetchItems() {
+function fetchItems() {
 
   return dispatch => {
     dispatch(fetchItemsRequest());
@@ -91,32 +98,51 @@ export default function fetchItems() {
   }
 }
 
-export function addToCart(e) {
-  return dispatch => {
-    dispatch(addToCartRequest())
+// function handleCartClick(e, items) {
+//   const items = this.props.items;
+//   console.log(items);
+//   const id = e.currentTarget.value;
+//   console.log('Added to Cart: ', id)
 
-    fetch(`${API_BASE_URL}/items`, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(res => {
-      if(!res.ok) {
-        return Promise.reject(res.statusText)
-      }
-      const items = res.json();
-      const cart = items.filter(item => item.id === e.id );
-    })
-    .then(items => {
-      dispatch(addToCartSuccess(items))
-    })
-    .catch(error => {
-      dispatch(addToCartError(error))
-    })
-  }
-}
+//   const cartItem = items.filter(item => id === item.id);
+//   console.log(cartItem);
+
+//   Object.assign({}, this.state, ({
+//     cart: [...this.state.cart, cartItem]
+//   }))
+
+//   console.log(this.state)
+
+// }
+
+export default { fetchItems }
+
+// export function addToCart() {
+//   return dispatch => {
+//     dispatch(addToCartRequest())
+
+//     fetch(`${API_BASE_URL}/items`, {
+//       method: 'GET',
+//       headers: {
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json'
+//       }
+//     })
+//     .then(res => {
+//       if(!res.ok) {
+//         return Promise.reject(res.statusText)
+//       }
+//       const items = res.json();
+//       const cart = items.filter(item => item.id === e.id );
+//     })
+//     .then(items => {
+//       dispatch(addToCartSuccess(items))
+//     })
+//     .catch(error => {
+//       dispatch(addToCartError(error))
+//     })
+//   }
+// }
 
 // export function fetchCartItems() {
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import fetchItems from '../../actions';
+import myObject from '../../actions';
 import './Items.css'
 
 export class Items extends Component {
@@ -8,32 +8,39 @@ export class Items extends Component {
     super(props)
 
     this.state = {
-      cart: ['example item'],
-      items: props.items
+      cart: []
     }
-
-    this.handleCartClick = this.handleCartClick.bind(this);
   }
 
   componentDidMount() {
     console.log('Items component loaded');
-    this.props.dispatch(fetchItems());
+    this.props.dispatch(myObject.fetchItems());
   }
 
-  handleCartClick() {
-    console.log('Added to Cart')
-    console.log(this.props.items);
-    console.log(this.state);
-    // this.props.dispatch(addToCart());
+  handleCartClick(e) {
+    const items = this.props.items;
+    console.log(items);
+    const id = e.currentTarget.value;
+    console.log('Added to Cart: ', id)
+
+    const cartItem = items.filter(item => id === item.id);
+    console.log(cartItem);
+
+    this.setState({
+      cart: [...this.state.cart, cartItem]
+    })
+
   }
 
-  // handleWishlistClick() {
-  //   console.log('Add to wishlist');
-  // }
+  handleWishlistClick(e) {
+    const id = e.currentTarget.value;
+    console.log('Add to wishlist: ', id);
+  }
 
   render() {
   const items = this.props.items;
   console.log('In Render', items);
+  console.log(this.state);
 
 
   const itemList = items.map( (item) => (
@@ -42,8 +49,8 @@ export class Items extends Component {
       <h1 className='item-name'>{item.title}</h1>
       <h2 className='item-price'>Price: {item.price}</h2>
       <div className='item-buttons'>
-        <button className='add-to-cart-button' onClick={()=>this.handleCartClick()}>Add to Cart</button>
-        <button className='add-to-wishlist-button' onClick={()=>this.handleWishlistClick()}>Add to Wishlist</button>
+        <button value={item.id} className='add-to-cart-button' onClick={(e)=>this.handleCartClick(e)}>Add to Cart</button>
+        <button value={item.id} className='add-to-wishlist-button' onClick={(e)=>this.handleWishlistClick(e)}>Add to Wishlist</button>
       </div>
     </li>
     ) 
