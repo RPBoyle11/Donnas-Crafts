@@ -8,14 +8,6 @@ import Footer from './Footer';
 import './Cart.css';
 
 class Cart extends Component {
-  // constructor(props) {
-  //   super(props)
-
-  // this.state = {
-  //     cart: this.props.cart
-  //   }
-  // }
-
   componentDidMount() {
     console.log('Items component loaded');
     this.props.dispatch(myObject.fetchItems());
@@ -46,34 +38,33 @@ class Cart extends Component {
       </div>
     ))
 
+    console.log(this.props.cart);
 
-    // console.log(this.state.cart);
-
-    // if(this.state.cart.length === 0) {
-    //   return (
-    //     <div className="App">
-    //     <Nav />
-    //        <div className='shopping-cart-header'>
-    //         <p>Shopping Cart - Please review your items before continuing with purchase.</p>
-    //        </div>
-    //     <div className='shopping-cart-body'>
-    //       <div className='continue-shopping'>
-    //           <a href='/'>
-    //           <button className='continue-shopping-button'>BACK TO SHOPPING</button>
-    //           </a>
-    //       </div>
-    //       <div className='cart-details'>
-    //         <span className='number-of-items'>Your Cart - 0 Items</span>
-    //         <span className='total-price'>Subtotal: $0.00</span>
-    //       </div>
-    //       <div className='item'>
-    //         <h2>There are no items in your cart.</h2>
-    //       </div>
-    //     </div>
-    //     <Footer />
-    //   </div>
-    //   )
-    // } else {
+    if(this.props.cart.length === 0) {
+      return (
+        <div className="App">
+        <Nav />
+           <div className='shopping-cart-header'>
+            <p>Shopping Cart - Please review your items before continuing with purchase.</p>
+           </div>
+        <div className='shopping-cart-body'>
+          <div className='continue-shopping'>
+              <a href='/'>
+              <button className='continue-shopping-button'>BACK TO SHOPPING</button>
+              </a>
+          </div>
+          <div className='cart-details'>
+            <span className='number-of-items'>Your Cart - 0 Items</span>
+            <span className='total-price'>Subtotal: $0.00</span>
+          </div>
+          <div className='item'>
+            <h2>There are no items in your cart.</h2>
+          </div>
+        </div>
+        <Footer />
+      </div>
+      )
+    } else {
       return (
       <div className="App">
         <Nav />
@@ -82,12 +73,12 @@ class Cart extends Component {
         </div>
         <div className='shopping-cart-body'>
           <div className='continue-shopping'>
-            <a href='/'>
+            <Link to='/'>
               <button className='continue-shopping-button'>BACK TO SHOPPING</button>
-            </a>
+            </Link>
           </div>
           <div className='cart-details'>
-            <span className='number-of-items'>Your Cart - 1 Item</span>
+            <span className='number-of-items'>Your Cart - {this.props.cart.length} Item(s)</span>
             <span className='total-price'>Subtotal: $50.00</span>
           </div>
           {itemList}
@@ -102,13 +93,13 @@ class Cart extends Component {
             </div>
             <Link to='/checkout'>
               <button className='checkout-button'>Checkout</button>
-            </ Link>
+            </Link>
           </div>
         </div>
         <Footer />
       </div>
     );
-    // }
+    }
   }
 }
 

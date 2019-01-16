@@ -15,10 +15,8 @@ export class Items extends Component {
     // console.log(items);
     const id = e.currentTarget.value;
     // console.log('Added to Cart: ', id)
-
     const cartItem = items.filter(item => id === item.id);
     // console.log(cartItem);
-
     this.props.dispatch(addToCart(cartItem))
 
   }

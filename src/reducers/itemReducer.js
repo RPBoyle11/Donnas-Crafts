@@ -36,9 +36,9 @@ export const itemReducer = (state = initialState, action) => {
       })
 
     case REMOVE_FROM_CART:
-      console.log(state, action.cartItem);
+      console.log('Remove from cart', action.cartItem[0].id);
       return Object.assign({}, state, {
-        cart: state.cart.filter(item => item.id !== action.cartItem.id)
+        cart: state.cart.filter(item => item.id !== action.cartItem[0].id)
       })
 
     default: return state
