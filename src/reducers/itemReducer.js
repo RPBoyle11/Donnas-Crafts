@@ -5,7 +5,8 @@ const initialState = {
   loading: false,
   error: null,
   cart: [],
-  wishList: []
+  wishList: [],
+  totalPrice: 0
 }
 
 export const itemReducer = (state = initialState, action) => {
@@ -33,6 +34,7 @@ export const itemReducer = (state = initialState, action) => {
     case ADD_TO_CART:
       return Object.assign({}, state, {
         cart: state.cart.concat(action.cartItem),
+        totalPrice: state.cart.concat(action.cartItem[0].price)
       })
 
     case REMOVE_FROM_CART:

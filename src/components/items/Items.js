@@ -45,7 +45,7 @@ export class Items extends Component {
     <li key={item.id} className='item'>
       <img src={item.img} alt=''></img>
       <h1 className='item-name'>{item.title}</h1>
-      <h2 className='item-price'>Price: {item.price}</h2>
+      <h2 className='item-price'>Price: ${item.price}</h2>
       <div className='item-buttons'>
         <button value={item.id} className='add-to-cart-button' onClick={(e)=>this.handleCartClick(e)}>Add to Cart</button>
         <button value={item.id} className='add-to-wishlist-button' onClick={(e)=>this.handleWishlistClick(e)}>Add to Wishlist</button>

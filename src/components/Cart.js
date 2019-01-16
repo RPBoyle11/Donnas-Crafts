@@ -27,78 +27,88 @@ class Cart extends Component {
   render() {
     let cart = this.props.cart
 
-    const itemList = cart.map((item) => (
+    const itemList = cart.map(item => (
       <div className='item' key={item.id}>
         <img src={item.img} alt=''></img>
         <h1 className='item-name'>{item.title}</h1>
-        <h2 className='item-price'>Price: {item.price}</h2>
+        <h2 className='item-price'>Price: ${item.price}</h2>
         <div className='item-buttons'>
           <button className='remove-from-cart' value={item.id} onClick={(e) => this.handleRemoveClick(e)}>Remove from Cart</button>
         </div>
       </div>
     ))
 
-    console.log(this.props.cart);
+    const checkoutList = cart.map(item => (
+      <p className='checkout-items'>{item.title}
+        <span className='item-quantity'>   1x </span>
+        <span className='checkout-items-price'> ${item.price}</span>
+      </p>
+    ))
 
-    if(this.props.cart.length === 0) {
+    const totalPrice = cart.map(item => {
+        let price = 0;
+        price = price + item.price;
+        return price
+    })
+
+    console.log(totalPrice);
+
+    if (this.props.cart.length === 0) {
       return (
         <div className="App">
-        <Nav />
-           <div className='shopping-cart-header'>
+          <Nav />
+          <div className='shopping-cart-header'>
             <p>Shopping Cart - Please review your items before continuing with purchase.</p>
-           </div>
-        <div className='shopping-cart-body'>
-          <div className='continue-shopping'>
+          </div>
+          <div className='shopping-cart-body'>
+            <div className='continue-shopping'>
               <a href='/'>
-              <button className='continue-shopping-button'>BACK TO SHOPPING</button>
+                <button className='continue-shopping-button'>BACK TO SHOPPING</button>
               </a>
+            </div>
+            <div className='cart-details'>
+              <span className='number-of-items'>Your Cart - 0 Items</span>
+              <span className='total-price'>Subtotal: $0.00</span>
+            </div>
+            <div className='item'>
+              <h2>There are no items in your cart.</h2>
+            </div>
           </div>
-          <div className='cart-details'>
-            <span className='number-of-items'>Your Cart - 0 Items</span>
-            <span className='total-price'>Subtotal: $0.00</span>
-          </div>
-          <div className='item'>
-            <h2>There are no items in your cart.</h2>
-          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
       )
     } else {
       return (
-      <div className="App">
-        <Nav />
-        <div className='shopping-cart-header'>
-          <p>Shopping Cart - Please review your items before continuing with purchase.</p>
-        </div>
-        <div className='shopping-cart-body'>
-          <div className='continue-shopping'>
-            <Link to='/'>
-              <button className='continue-shopping-button'>BACK TO SHOPPING</button>
-            </Link>
+        <div className="App">
+          <Nav />
+          <div className='shopping-cart-header'>
+            <p>Shopping Cart - Please review your items before continuing with purchase.</p>
           </div>
-          <div className='cart-details'>
-            <span className='number-of-items'>Your Cart - {this.props.cart.length} Item(s)</span>
-            <span className='total-price'>Subtotal: $50.00</span>
-          </div>
-          {itemList}
-          <div className='checkout-box'>
-            <span className='checkout-items-title'>Items</span>
-            <div className='checkout-items-details'>
-              <p className='checkout-items'>Bless This Home - Wreath
-                    <span className='item-quantity'>   1x </span>
-                <span className='checkout-items-price'> $50.00</span>
-              </p>
-              <p className='checkout-total'>Total Price: $50.00</p>
+          <div className='shopping-cart-body'>
+            <div className='continue-shopping'>
+              <Link to='/'>
+                <button className='continue-shopping-button'>BACK TO SHOPPING</button>
+              </Link>
             </div>
-            <Link to='/checkout'>
-              <button className='checkout-button'>Checkout</button>
-            </Link>
+            <div className='cart-details'>
+              <span className='number-of-items'>Your Cart - {this.props.cart.length} Item(s)</span>
+              <span className='total-price'>Subtotal: $50.00</span>
+            </div>
+            {itemList}
+            <div className='checkout-box'>
+              <span className='checkout-items-title'>Items</span>
+              <div className='checkout-items-details'>
+                {checkoutList}
+                <p className='checkout-total'>Total Price: $50.00</p>
+              </div>
+              <Link to='/checkout'>
+                <button className='checkout-button'>Checkout</button>
+              </Link>
+            </div>
           </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    );
+      );
     }
   }
 }
