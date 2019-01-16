@@ -9,6 +9,12 @@ This is a retail site for people that have a love for creative crafts can go and
 2. User can add items to a shopping cart so that you can keep track of all the items you wish to buy.
 3. User can checkout on this site and pay with either Paypal now, or Venmo later (items will not be sent to owners until payment has been received)
 
+### Technical Stack:
+- React for Frontend
+- Redux for State Management
+- Node and Express for backend
+- Mongo for the database
+
 ### File Tree:
 ``` bash
 ├──node_modules
