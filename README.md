@@ -13,7 +13,7 @@ This is a retail site for people that have a love for creative crafts can go and
 - React for Frontend
 - Redux for State Management
 - Node and Express for backend
-- Mongo for the database
+- MongoDB for the database
 
 ### File Tree:
 ``` bash
