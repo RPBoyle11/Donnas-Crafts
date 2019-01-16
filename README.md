@@ -18,48 +18,48 @@ This is a retail site for people that have a love for creative crafts can go and
 ├──package.json
 ├──README.md
 ├──public
-|   ├──index.html
-|   ├──manifest.json
-|   ├──favicon.ico
+│   ├──index.html
+│   ├──manifest.json
+│   ├──favicon.ico
 ├──src
-|   ├──actions
-|   |   ├──index.js
-|   ├──components
-|   |   ├──buttons
-|   |   |   ├──Account.css
-|   |   |   ├──Account.js
-|   |   |   ├──Menu.css
-|   |   |   ├──Menu.js
-|   |   |   ├──Search.css
-|   |   |   ├──Search.js
-|   |   |   ├──ShoppingCart.css
-|   |   |   ├──ShoppingCart.js
-|   |   |   ├──WishList.js
-|   |   ├──items
-|   |   |   ├──Items.css
-|   |   |   ├──Items.js
-|   |   ├──userInfo
-|   |   |   ├──AccountInfo.css
-|   |   |   ├──AccountInfo.js
-|   |   |   ├──Login.js
-|   |   ├──App.js
-|   |   ├──Cart.css
-|   |   ├──Cart.js
-|   |   ├──Checkout.css
-|   |   ├──Checkout.js
-|   |   ├──Footer.css
-|   |   ├──Footer.js
-|   |   ├──Home.css
-|   |   ├──Home.js
-|   |   ├──Nav.css
-|   |   ├──Nav.js
-|   |   ├──Paypal.css
-|   |   ├──Paypal.js
-|   ├──reducers
-|   ├──config.js
-|   ├──index.css
-|   ├──index.js
-|   ├──serviceWorker.js
-|   ├──store.js
-|   ├──validators.js
+│   ├──actions
+│   │   ├──index.js
+│   ├──components
+│   │   ├──buttons
+│   │   │   ├──Account.css
+│   │   │   ├──Account.js
+│   │   │   ├──Menu.css
+│   │   │   ├──Menu.js
+│   │   │   ├──Search.css
+│   │   │   ├──Search.js
+│   │   │   ├──ShoppingCart.css
+│   │   │   ├──ShoppingCart.js
+│   │   │   ├──WishList.js
+│   │   ├──items
+│   │   │   ├──Items.css
+│   │   │   ├──Items.js
+│   │   ├──userInfo
+│   │   │   ├──AccountInfo.css
+│   │   │   ├──AccountInfo.js
+│   │   │   ├──Login.js
+│   │   ├──App.js
+│   │   ├──Cart.css
+│   │   ├──Cart.js
+│   │   ├──Checkout.css
+│   │   ├──Checkout.js
+│   │   ├──Footer.css
+│   │   ├──Footer.js
+│   │   ├──Home.css
+│   │   ├──Home.js
+│   │   ├──Nav.css
+│   │   ├──Nav.js
+│   │   ├──Paypal.css
+│   │   ├──Paypal.js
+│   ├──reducers
+│   ├──config.js
+│   ├──index.css
+│   ├──index.js
+│   ├──serviceWorker.js
+│   ├──store.js
+│   ├──validators.js
 ```
