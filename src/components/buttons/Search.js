@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import './Search.css';
 
 class Search extends Component {
   
-  handleClick() {
+  handleClick(e) {
     
   }
 
@@ -12,9 +13,9 @@ class Search extends Component {
     return (
       <div className='search-bar'>
         <input placeholder='Wreath'></input>
-          <a href='/:search'>
-            <button onClick={()=>this.handleClick()}>Search</button>
-          </a>
+          <Link to='/:search'>
+            <button onClick={(e)=>this.handleClick(e)}>Search</button>
+          </Link>
       </div>
     );
   }

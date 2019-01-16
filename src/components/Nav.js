@@ -1,5 +1,6 @@
 import React, { Component }  from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import ShoppingCart from './buttons/ShoppingCart';
 import Account from './buttons/Account';
 import Menu from './buttons/Menu';
@@ -12,7 +13,7 @@ class Nav extends Component {
           <nav className="App-header">
             <Menu />
             <Search />
-            <h1 className='page-title'><a className='title-anchor' href='/'>Donna's Crafts 'N Creations</a></h1>
+            <h1 className='page-title'><Link className='title-anchor' to='/'>Donna's Crafts 'N Creations</Link></h1>
             <Account />
             <ShoppingCart />
           </nav>

@@ -21,15 +21,15 @@ export const shoppingCartClicked = () => ({
 })
 
 export const ADD_TO_CART = 'ADD_TO_CART';
-export const addToCart = (id) => ({
+export const addToCart = (cartItem) => ({
   type: ADD_TO_CART,
-  id,
+  cartItem,
 })
 
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
-export const removeFromCart = (id) => ({
+export const removeFromCart = (cartItem) => ({
   type: REMOVE_FROM_CART,
-  id
+  cartItem
 })
 
 export const ADD_TO_WISHLIST_CLICKED = 'ADD_TO_WISHLIST_CLICKED';

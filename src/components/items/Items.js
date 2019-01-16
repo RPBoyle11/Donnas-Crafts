@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import myObject from '../../actions';
+import { addToCart } from '../../actions';
 import './Items.css'
 
 export class Items extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      cart: []
-    }
-  }
-
   componentDidMount() {
     console.log('Items component loaded');
     this.props.dispatch(myObject.fetchItems());
@@ -19,22 +12,29 @@ export class Items extends Component {
 
   handleCartClick(e) {
     const items = this.props.items;
-    console.log(items);
+    // console.log(items);
     const id = e.currentTarget.value;
-    console.log('Added to Cart: ', id)
+    // console.log('Added to Cart: ', id)
 
     const cartItem = items.filter(item => id === item.id);
-    console.log(cartItem);
+    // console.log(cartItem);
 
-    this.setState({
-      cart: [...this.state.cart, cartItem]
-    })
+    this.props.dispatch(addToCart(cartItem))
 
   }
 
   handleWishlistClick(e) {
+    const items = this.props.items;
+    // console.log(items);
     const id = e.currentTarget.value;
-    console.log('Add to wishlist: ', id);
+    // console.log('Added to Wishlist: ', id)
+
+    const wishListItem = items.filter(item => id === item.id);
+    // console.log(wishListItem);
+
+    this.setState({
+      wishList: [...this.state.wishList, wishListItem]
+    })
   }
 
   render() {

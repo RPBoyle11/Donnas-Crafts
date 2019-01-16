@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class Account extends Component {
 
   render() {
     return (
-      <a href='/account-info'>
+      <Link to='/account-info'>
       <button>Account Information</button>
-    </a>
+    </Link>
     )
   }
 }

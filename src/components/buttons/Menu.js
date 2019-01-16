@@ -3,6 +3,12 @@ import { connect } from 'react-redux';
 import './Menu.css';
 
 class Menu extends Component {
+
+//handle filtering of items in home screen so that you only view items that match the season or holiday that you selected   
+//will be done onSelect={(e)=>this.handleSelection(e)}
+  handleSelection(e) {
+
+  }
   
   render() {
     return (

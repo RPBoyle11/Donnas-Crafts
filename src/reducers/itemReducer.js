@@ -1,4 +1,4 @@
-import { FETCH_ITEMS_REQUEST, FETCH_ITEMS_SUCCESS, FETCH_ITEMS_ERROR, ADD_TO_CART_ERROR, ADD_TO_CART_REQUEST, ADD_TO_CART_SUCCESS } from '../actions';
+import { FETCH_ITEMS_REQUEST, FETCH_ITEMS_SUCCESS, FETCH_ITEMS_ERROR, ADD_TO_CART, REMOVE_FROM_CART } from '../actions';
 
 const initialState = {
   items: [],
@@ -8,44 +8,38 @@ const initialState = {
   wishList: []
 }
 
-export const itemReducer = (state=initialState, action) => {
+export const itemReducer = (state = initialState, action) => {
   console.log('In item Reducer', action.items);
-    switch (action.type) {
-    
-      case FETCH_ITEMS_REQUEST : 
-      return Object.assign({}, state, { 
-        loading: true })
+  switch (action.type) {
 
-      case FETCH_ITEMS_SUCCESS :
-      return Object.assign({}, state, { 
-      loading: false, 
-      items: action.items, 
-      error: null
-    })
+    case FETCH_ITEMS_REQUEST:
+      return Object.assign({}, state, {
+        loading: true
+      })
 
-      case FETCH_ITEMS_ERROR :
-      return Object.assign({}, state, { 
-      loading: false,
-      error: action.error
-    })
+    case FETCH_ITEMS_SUCCESS:
+      return Object.assign({}, state, {
+        loading: false,
+        items: action.items,
+        error: null
+      })
 
-    // case ADD_TO_CART_REQUEST :
-    // return Object.assign({}, state, {
-    //   loading: true
-    // })
+    case FETCH_ITEMS_ERROR:
+      return Object.assign({}, state, {
+        loading: false,
+        error: action.error
+      })
 
-    // case ADD_TO_CART_SUCCESS :
-    // return Object.assign({}, state, {
-    //   loading: false,
-    //   cart: action.cart,
-    //   totalPrice: action.totalPrice
-    // })
+    case ADD_TO_CART:
+      return Object.assign({}, state, {
+        cart: state.cart.concat(action.cartItem),
+      })
 
-    // case ADD_TO_CART_ERROR :
-    // return Object.assign({}, state, {
-    //   loading: false,
-    //   error: action.error
-    // })
+    case REMOVE_FROM_CART:
+      console.log(state, action.cartItem);
+      return Object.assign({}, state, {
+        cart: state.cart.filter(item => item.id !== action.cartItem.id)
+      })
 
     default: return state
   }

@@ -9,7 +9,7 @@ import './Home.css';
 class Home extends Component {
 
   render() {
-    console.log(this.props.cart);
+    // console.log(this.props.cart);
  
     return (
         <div className="App">
