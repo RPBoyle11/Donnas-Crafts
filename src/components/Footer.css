@@ -1,9 +1,16 @@
 footer {
-  position: fixed;
-  background: rgba(4, 4, 141, 0.753);
-  color: white;
-  border-top: 2px black solid;
+  display: block;
+  position: absolute; 
+  text-align: center; 
+  padding-bottom: 20px;
   width: 100%;
+  background-color: rgba(134, 190, 126, 0.753);
+  color: white;
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  border-top: 2px black solid;
+  font-weight: bold; 
 }
 
 a {

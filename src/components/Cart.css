@@ -7,6 +7,10 @@
   display: inline-block
 }
 
+.shopping-cart-header {
+  text-align: center;
+}
+
 .cart-details {
   padding: 8px;
   padding-left: 25px;

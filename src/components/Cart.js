@@ -45,13 +45,23 @@ class Cart extends Component {
       </p>
     ))
 
-    const totalPrice = cart.map(item => {
+    function sum(a, b){
+      return a + b
+    }
+
+    const totalPrices = cart.map(item => {
         let price = 0;
         price = price + item.price;
         return price
     })
 
-    console.log(totalPrice);
+    let cartPrice = 0;
+
+    if(totalPrices.length) {
+      cartPrice = totalPrices.reduce(sum)
+    }
+
+    console.log(cartPrice);
 
     if (this.props.cart.length === 0) {
       return (
@@ -92,14 +102,14 @@ class Cart extends Component {
             </div>
             <div className='cart-details'>
               <span className='number-of-items'>Your Cart - {this.props.cart.length} Item(s)</span>
-              <span className='total-price'>Subtotal: $50.00</span>
+              <span className='total-price'>Subtotal: $ {cartPrice}</span>
             </div>
             {itemList}
             <div className='checkout-box'>
               <span className='checkout-items-title'>Items</span>
               <div className='checkout-items-details'>
                 {checkoutList}
-                <p className='checkout-total'>Total Price: $50.00</p>
+                <p className='checkout-total'>Total Price: ${cartPrice}</p>
               </div>
               <Link to='/checkout'>
                 <button className='checkout-button'>Checkout</button>

@@ -38,8 +38,6 @@ export class Items extends Component {
   render() {
   const items = this.props.items;
   console.log('In Render', items);
-  console.log(this.state);
-
 
   const itemList = items.map( (item) => (
     <li key={item.id} className='item'>
@@ -60,7 +58,7 @@ export class Items extends Component {
 const mapStateToProps = state => {
   return {
     items: state.itemReducer.items,
-    cart: 'This is from Items.js'
+    cart: state.itemReducer.cart
   }
 }
 
