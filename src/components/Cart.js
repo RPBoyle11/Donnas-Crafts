@@ -72,9 +72,9 @@ class Cart extends Component {
           </div>
           <div className='shopping-cart-body'>
             <div className='continue-shopping'>
-              <a href='/'>
+              <Link to='/'>
                 <button className='continue-shopping-button'>BACK TO SHOPPING</button>
-              </a>
+              </Link>
             </div>
             <div className='cart-details'>
               <span className='number-of-items'>Your Cart - 0 Items</span>

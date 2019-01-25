@@ -27,7 +27,8 @@ class Home extends Component {
 const mapStateToProps = state => {
   return {
     items: state.itemReducer.items,
-    cart: state.itemReducer.cart
+    cart: state.itemReducer.cart,
+    filter: state.itemReducer.filter
   }
 }
 

@@ -1,10 +1,11 @@
-import { FETCH_ITEMS_REQUEST, FETCH_ITEMS_SUCCESS, FETCH_ITEMS_ERROR, ADD_TO_CART, REMOVE_FROM_CART } from '../actions';
+import { FETCH_ITEMS_REQUEST, FETCH_ITEMS_SUCCESS, FETCH_ITEMS_ERROR, ADD_TO_CART, REMOVE_FROM_CART, FILTER_ITEMS } from '../actions';
 
 const initialState = {
   items: [],
   loading: false,
   error: null,
   cart: [],
+  filter:[],
   wishList: [],
   totalPrice: 0
 }
@@ -41,6 +42,12 @@ export const itemReducer = (state = initialState, action) => {
       console.log('Remove from cart', action.cartItem[0].id);
       return Object.assign({}, state, {
         cart: state.cart.filter(item => item.id !== action.cartItem[0].id)
+      })
+
+      case FILTER_ITEMS:
+      console.log('Items have been filtered');
+      return Object.assign({}, state, {
+        filter: action.filteredItems
       })
 
     default: return state

@@ -37,6 +37,12 @@ export const addToWishlist = () => ({
   type: ADD_TO_WISHLIST 
 })
 
+export const FILTER_ITEMS = 'FILTER_ITEMS';
+export const filterItems = (filteredItems) => ({
+  type: FILTER_ITEMS,
+  filteredItems
+})
+
 export const FETCH_ITEMS_REQUEST = 'FETCH_ITEMS_REQUEST';
 export const fetchItemsRequest = () => ({
   type: FETCH_ITEMS_REQUEST

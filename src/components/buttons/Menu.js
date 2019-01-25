@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { filterItems } from '../../actions';
 import './Menu.css';
 
 class Menu extends Component {
@@ -8,6 +9,8 @@ class Menu extends Component {
 
     const value = e.currentTarget.value;
     const filteredItems = items.filter(item => (value === item.theme || value === item.season))
+
+    this.props.dispatch(filterItems(filteredItems));
     console.log(value);
     console.log(filteredItems);
   }
@@ -34,7 +37,7 @@ class Menu extends Component {
 const mapStateToProps = state => {
   return {
     items: state.itemReducer.items,
-    
+    filter: state.itemReducer.filter
   }
 }
 
