@@ -12,24 +12,16 @@ export class Items extends Component {
 
   handleCartClick(e) {
     const items = this.props.items;
-    // console.log(items);
     const id = e.currentTarget.value;
-    // console.log('Added to Cart: ', id)
     const cartItem = items.filter(item => id === item.id);
-    // console.log(cartItem);
     this.props.dispatch(addToCart(cartItem))
 
   }
 
   handleWishlistClick(e) {
     const items = this.props.items;
-    // console.log(items);
     const id = e.currentTarget.value;
-    // console.log('Added to Wishlist: ', id)
-
     const wishListItem = items.filter(item => id === item.id);
-    // console.log(wishListItem);
-
     this.setState({
       wishList: [...this.state.wishList, wishListItem]
     })
@@ -38,8 +30,8 @@ export class Items extends Component {
   render() {
   const items = this.props.items;
   const filtered = this.props.filter;
-  console.log('In Render', items);
-  // console.log('filter: ', this.props.filter);
+  // console.log('In Render', items);
+
 
   const filterList = filtered.map( (item) => (
     <li key={item.id} className='item'>
