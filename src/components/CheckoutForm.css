@@ -1,0 +1,14 @@
+.checkout-form {
+  margin-right: auto;
+  margin-left:  auto;
+  border: solid black 2px;
+  height: 500px;
+  width: 300px;
+  background-color: white;
+}
+
+.input-fields {
+  margin-left: 25px;
+
+  padding-top: 25%;
+}
