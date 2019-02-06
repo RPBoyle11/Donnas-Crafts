@@ -1,12 +1,23 @@
 nav {
-  background: rgba(245, 94, 94, 0.356);
+  background: rgba(253, 251, 223, 0.918);
   text-align: center;
 }
 
-h1 {
-  display: inline-block;
+nav h1 {
+  display: none;
+  /* display: inline-block; */
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 30px;
-  font-size: 25px;
+  font-size: 50px;
+  line-height: 44px;
+}
+
+.fancy-d {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  line-height: 44px;
+  margin-left: auto;
+  margin-right: auto;
 }

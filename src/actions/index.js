@@ -65,7 +65,7 @@ function fetchItems() {
   return dispatch => {
     dispatch(fetchItemsRequest());
 
-  fetch(`${API_BASE_URL}/items`, {
+  fetch(`${API_BASE_URL}/api/items`, {
     method: 'GET',
     headers: {
       'Accept': 'application/json',

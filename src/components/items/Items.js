@@ -35,7 +35,7 @@ export class Items extends Component {
 
   const filterList = filtered.map( (item) => (
     <li key={item.id} className='item'>
-      <img src={item.img} alt=''></img>
+      <img src={item.img} alt='' className='item-img'></img>
       <h1 className='item-name'>{item.title}</h1>
       <h2 className='item-price'>Price: ${item.price}</h2>
       <div className='item-buttons'>
@@ -48,7 +48,7 @@ export class Items extends Component {
 
   const itemList = items.map( (item) => (
     <li key={item.id} className='item'>
-      <img src={item.img} alt=''></img>
+      <img src={item.img} alt='' className='item-img'></img>
       <h1 className='item-name'>{item.title}</h1>
       <h2 className='item-price'>Price: ${item.price}</h2>
       <div className='item-buttons'>
