@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import myObject from '../../actions';
-import { addToCart } from '../../actions';
-import './Items.css'
+import myObject from '../actions';
+import { addToCart } from '../actions';
+import '../styles/Items.css'
 
 export class Items extends Component {
   componentDidMount() {
@@ -36,7 +36,7 @@ export class Items extends Component {
   const filterList = filtered.map( (item) => (
     <li key={item.id} className='item'>
       <img src={item.img} alt='' className='item-img'></img>
-      <h1 className='item-name'>{item.title}</h1>
+      <h1 className='item-title'>{item.title}</h1>
       <h2 className='item-price'>Price: ${item.price}</h2>
       <div className='item-buttons'>
         <button value={item.id} className='add-to-cart-button' onClick={(e)=>this.handleCartClick(e)}>Add to Cart</button>
@@ -49,7 +49,7 @@ export class Items extends Component {
   const itemList = items.map( (item) => (
     <li key={item.id} className='item'>
       <img src={item.img} alt='' className='item-img'></img>
-      <h1 className='item-name'>{item.title}</h1>
+      <h1 className='item-title'>{item.title}</h1>
       <h2 className='item-price'>Price: ${item.price}</h2>
       <div className='item-buttons'>
         <button value={item.id} className='add-to-cart-button' onClick={(e)=>this.handleCartClick(e)}>Add to Cart</button>

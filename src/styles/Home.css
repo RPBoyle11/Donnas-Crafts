@@ -10,3 +10,7 @@
   text-align: center;
   border: black 1px solid;
 }
+
+.item-list {
+  width: 100%;
+}

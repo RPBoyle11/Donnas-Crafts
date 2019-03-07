@@ -2,10 +2,10 @@ import React from 'react';
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import myObject, { removeFromCart } from '../actions';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import Footer from './Footer';
-import './Cart.css';
+import '../styles/Cart.css';
 
 class Cart extends Component {
   componentDidMount() {
@@ -16,11 +16,8 @@ class Cart extends Component {
   handleRemoveClick(e) {
     console.log('Removed from Cart');
     const items = this.props.cart;
-    // console.log(items);
     const id = e.currentTarget.value;
-    // console.log('Added to Cart: ', id)
     const cartItem = items.filter(item => id === item.id);
-    // console.log(cartItem);
     this.props.dispatch(removeFromCart(cartItem))
   }
 

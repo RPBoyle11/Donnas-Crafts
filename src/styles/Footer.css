@@ -1,0 +1,29 @@
+.social-media-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+footer {
+  border-top: 1px lightgray solid;
+  margin-top: 15px;
+}
+
+footer h2 {
+  text-align: center;
+}
+footer p {
+  text-align: center; 
+}
+
+.footer-links {
+  display: block;
+  padding: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #1d2636;
+}

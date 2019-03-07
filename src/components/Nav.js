@@ -1,15 +1,13 @@
-import React, { Component }  from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ShoppingCart from './buttons/ShoppingCart';
 import Account from './buttons/Account';
 import Menu from './buttons/Menu';
 import Search from './buttons/Search';
-import mobileLetter from '../images/flowerD.jpg';
-import './Nav.css';
+import mobileLetter from '../images/Fancy_Black_D.jpg';
+import '../styles/Nav.css';
 
-class Nav extends Component {
-  render() {
+export default function Nav() {
     return (
           <nav className="App-header">
             <Menu />
@@ -20,13 +18,4 @@ class Nav extends Component {
             <ShoppingCart />
           </nav>
     );
-  }
 }
-
-const mapStateToProps = state => {
-  return {
-    
-  }
-}
-
-export default connect(mapStateToProps)(Nav);

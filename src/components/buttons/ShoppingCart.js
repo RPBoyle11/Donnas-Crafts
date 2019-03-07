@@ -7,9 +7,11 @@ class ShoppingCart extends Component {
 
   render() {
     return (
-      <Link to='/shopping-cart'>
-        <button className='shoppingCart-button'>Shopping Cart</button>
-      </Link>
+      <div className='shopping-cart-link-container'>
+        <Link to='/shopping-cart'>
+          <button className='shoppingCart-button'>Shopping Cart</button>
+        </Link>
+      </div>  
     )
   }
 }

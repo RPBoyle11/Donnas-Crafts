@@ -1,5 +1,5 @@
 nav {
-  background: rgba(253, 251, 223, 0.918);
+  background: white;
   text-align: center;
 }
 
@@ -14,10 +14,12 @@ nav h1 {
 }
 
 .fancy-d {
+  display: inline-block;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 30px;
   line-height: 44px;
   margin-left: auto;
   margin-right: auto;
+  width: 12%;
 }

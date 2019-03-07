@@ -3,3 +3,8 @@
   padding-top: 30px;
   float: left;
 } */
+
+.menu-container {
+  width: 20%;
+  display: inline-block;
+}

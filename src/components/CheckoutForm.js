@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './CheckoutForm.css';
+import '../styles/CheckoutForm.css';
 
 class CheckoutForm extends Component {
   

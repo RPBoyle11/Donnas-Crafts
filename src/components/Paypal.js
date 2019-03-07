@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import './Paypal.css';
+import '../styles/Paypal.css';
 
 class Paypal extends React.Component {
   render() {

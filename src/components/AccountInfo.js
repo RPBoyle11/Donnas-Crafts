@@ -1,10 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import Nav from '../Nav';
-import './AccountInfo.css';
-import Footer from '../Footer';
+import Nav from './Nav';
+import '../styles/AccountInfo.css';
+import Footer from './Footer';
 
 class AccountInfo extends Component {
 
