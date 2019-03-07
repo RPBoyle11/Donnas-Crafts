@@ -1,44 +1,51 @@
 ul {
+  width: 100%;
   list-style-type: none;
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
   padding-top: 10px;
 }
 
 .item {
   box-sizing: border-box;
-  width: 33%;
-  padding: 1%;
-  border: 1px black solid;
+  justify-content: normal;
+  vertical-align: top;
+  width: 24%;
+  height: 360px;
+  padding: 5px;
+  border-bottom: 1px grey solid;
+  border-radius: 2px;
+  margin: 3px;
 }
 
 .item-img {
-  width: 50%;
+  width: 90%;
+  height: 220px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 2px;
 }
 
 .item-title {
-  width: 20%;
+  display: block;
+  text-align: center;
   font-size: 20px;
-  position: absolute;
-  display: inline-block;
   margin: 0;
-  padding-left: 30px;
+  letter-spacing: .5px;
 }
 
 .item-price {
-  position: absolute;
-  display: inline-block;
+  display: block;
+  text-align: center;
   margin: 0;
-  padding-top: 60px;
-  padding-left: 30px;
-  font-size: 1.3vw;
 }
 
 .item-buttons {
-  display: inline-block;
-  position: absolute;
-  padding-left: 30px;
-  margin-top: 90px;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
 }
 
 /* h1 {

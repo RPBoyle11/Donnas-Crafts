@@ -30,9 +30,6 @@ export class Items extends Component {
   render() {
   const items = this.props.items;
   const filtered = this.props.filter;
-  // console.log('In Render', items);
-
-
   const filterList = filtered.map( (item) => (
     <li key={item.id} className='item'>
       <img src={item.img} alt='' className='item-img'></img>
@@ -49,8 +46,8 @@ export class Items extends Component {
   const itemList = items.map( (item) => (
     <li key={item.id} className='item'>
       <img src={item.img} alt='' className='item-img'></img>
-      <h1 className='item-title'>{item.title}</h1>
-      <h2 className='item-price'>Price: ${item.price}</h2>
+      <p className='item-title'>{item.title}</p>
+      <p className='item-price'>Price: ${item.price}</p>
       <div className='item-buttons'>
         <button value={item.id} className='add-to-cart-button' onClick={(e)=>this.handleCartClick(e)}>Add to Cart</button>
         <button value={item.id} className='add-to-wishlist-button' onClick={(e)=>this.handleWishlistClick(e)}>Add to Wishlist</button>
