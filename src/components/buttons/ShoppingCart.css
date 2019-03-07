@@ -1,14 +1,13 @@
-/* .shoppingCart-button {
-  height: 10px;
-  width: 14px;
+.shopping-cart-link-container {
+  display: block;
+  position: relative;
+  float: right;
+  padding-top: 8px;
+  padding-right: 8px;
 }
 
-.shopping-cart-img {
-  font-size: 12px;
-  background-image: 'https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global_bluebeacon-V3-1x_optimized._CB483188077_.png'
-} */
-
-.shopping-cart-link-container {
-  width: 20%;
-  display: inline-block;
+.cart-link {
+  text-decoration: none;
+  color: rgba(4, 26, 3, 0.801);
+  font-weight: bold;
 }

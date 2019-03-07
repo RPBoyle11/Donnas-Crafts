@@ -8,8 +8,8 @@ class ShoppingCart extends Component {
   render() {
     return (
       <div className='shopping-cart-link-container'>
-        <Link to='/shopping-cart'>
-          <button className='shoppingCart-button'>Shopping Cart</button>
+        <Link className='cart-link' to='/shopping-cart'>
+          Shopping Cart
         </Link>
       </div>  
     )

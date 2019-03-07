@@ -18,7 +18,7 @@ class Menu extends Component {
     return (
     <div className='menu-container'>
       <select className='menu-dropdown' onChange={(e)=>this.handleSelection(e)}>
-        <option value='menu'>Menu</option>
+        <option value='menu'>Categories</option>
         <option value='holidays' disabled>Shop by Holiday</option>
         <option value='Christmas' >Christmas</option>
         <option value='4th of July'>4th of July</option>
