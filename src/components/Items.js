@@ -37,7 +37,7 @@ export class Items extends Component {
       <h2 className='item-price'>Price: ${item.price}</h2>
       <div className='item-buttons'>
         <button value={item.id} className='add-to-cart-button' onClick={(e)=>this.handleCartClick(e)}>Add to Cart</button>
-        <button value={item.id} className='add-to-wishlist-button' onClick={(e)=>this.handleWishlistClick(e)}>Add to Wishlist</button>
+        {/* <button value={item.id} className='add-to-wishlist-button' onClick={(e)=>this.handleWishlistClick(e)}>Add to Wishlist</button> */}
       </div>
     </li>
     ) 
@@ -50,7 +50,7 @@ export class Items extends Component {
       <p className='item-price'>Price: ${item.price}</p>
       <div className='item-buttons'>
         <button value={item.id} className='add-to-cart-button' onClick={(e)=>this.handleCartClick(e)}>Add to Cart</button>
-        <button value={item.id} className='add-to-wishlist-button' onClick={(e)=>this.handleWishlistClick(e)}>Add to Wishlist</button>
+        {/* <button value={item.id} className='add-to-wishlist-button' onClick={(e)=>this.handleWishlistClick(e)}>Add to Wishlist</button> */}
       </div>
     </li>
     ) 
