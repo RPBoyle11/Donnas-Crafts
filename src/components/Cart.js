@@ -23,14 +23,14 @@ class Cart extends Component {
   render() {
     let cart = this.props.cart
     const itemList = cart.map(item => (
-      <div className='item' key={item.id}>
-        <img src={item.img} alt=''></img>
-        <h1 className='item-name'>{item.title}</h1>
-        <h2 className='item-price'>Price: ${item.price}</h2>
-        <div className='item-buttons'>
+      <li className='cart-item' key={item.id}>
+        <img src={item.img} alt='' className='cart-item-img'></img>
+        <p className='cart-item-title'>{item.title}</p>
+        <p className='cart-item-price'>Price: ${item.price}</p>
+        <div className='cart-item-buttons'>
           <button className='remove-from-cart' value={item.id} onClick={(e) => this.handleRemoveClick(e)}>Remove from Cart</button>
         </div>
-      </div>
+      </li>
     ))
 
     const checkoutList = cart.map(item => (
@@ -60,46 +60,46 @@ class Cart extends Component {
 
     if (this.props.cart.length === 0) {
       return (
-        <div className="App">
-          {/* <Nav /> */}
+        <div className="cart-page">
+          <header>Donna's Crafts 'N Creations</header>
+          <div className='continue-shopping'>
+            <Link 
+                to='/'
+                className='continue-shopping-link'>BACK TO SHOPPING
+            </Link>
+          </div>
           <div className='shopping-cart-header'>
-            <p>Shopping Cart - Please review your items before continuing with purchase.</p>
+            <p className='cart-page-name'>Shopping Cart</p>
+            <p className='review-purchase'>Please review your items before continuing with purchase.</p>
           </div>
           <div className='shopping-cart-body'>
-            <div className='continue-shopping'>
-              <Link to='/'>
-                <button className='continue-shopping-button'>BACK TO SHOPPING</button>
-              </Link>
-            </div>
             <div className='cart-details'>
-              <span className='number-of-items'>Your Cart - 0 Items</span>
-              <span className='total-price'>Subtotal: $0.00</span>
+              <p className='number-of-items'>Your Cart - 0 Items</p>
+              <p className='total-price'>Subtotal: $0.00</p>
             </div>
-            <div className='item'>
-              <h2>There are no items in your cart.</h2>
-            </div>
+              <p className='no-items-p'>There are no items in your cart.</p>
           </div>
           <Footer />
         </div>
       )
     } else {
       return (
-        <div className="App">
-          {/* <Nav /> */}
-          <div className='shopping-cart-header'>
-            <p>Shopping Cart - Please review your items before continuing with purchase.</p>
+        <div className="cart-page">
+          <header>Donna's Crafts 'N Creations</header>
+          <div className='continue-shopping'>
+            <Link 
+              to='/'
+              className='continue-shopping-link'>BACK TO SHOPPING
+            </Link>
           </div>
-          <div className='shopping-cart-body'>
-            <div className='continue-shopping'>
-              <Link to='/'>
-                <button className='continue-shopping-button'>BACK TO SHOPPING</button>
-              </Link>
-            </div>
-            <div className='cart-details'>
-              <span className='number-of-items'>Your Cart - {this.props.cart.length} Item(s)</span>
-              <span className='total-price'>Subtotal: $ {cartPrice}</span>
-            </div>
-            {itemList}
+          <div className='shopping-cart-header'>
+            <p className='cart-page-name'>Shopping Cart</p>
+            <p className='review-purchase'>Please review your items before continuing with purchase.</p>
+          </div>
+          <div className='cart-details'>
+            <p className='number-of-items'>Your Cart - {this.props.cart.length} Item(s)</p>
+            <p className='total-price'>Subtotal: $ {cartPrice}</p>
+          </div>
             <div className='checkout-box'>
               <span className='checkout-items-title'>Items</span>
               <div className='checkout-items-details'>
@@ -110,7 +110,9 @@ class Cart extends Component {
                 <button className='checkout-button'>Checkout</button>
               </Link>
             </div>
-          </div>
+            <ul className='cart-list'>
+              {itemList}
+            </ul>
           <Footer />
         </div>
       );

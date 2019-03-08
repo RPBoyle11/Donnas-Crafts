@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Nav from './Nav';
+import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import CheckoutForm from './CheckoutForm';
 
 class Checkout extends Component {
   render() {
     return(
-      <div>
-        <Nav />
-        {/* <h1 className='checkout-header'>Checkout:  Please review your purchase one last time.</h1>
-        <div className='checkout-body'>
-              <div className='checkout-details'>
-                <span className='number-of-items'>Your Cart - 1 Item</span>
-                <span className='total-price'>Subtotal: $50.00</span>
-              </div>
-              <a href='/'>
-                <button className='checkout-button'>Continue with Purchase</button>
-              </a>
-            </div> */}
+      <div className='checkout-page'>
+      <header>Donna's Crafts 'N Creations</header>
+        <Link 
+          to='/'
+          className='continue-shopping-link'>BACK TO SHOPPING
+        </Link>
+        <Link 
+          to='/'
+          className='back-to-cart'>BACK TO CART
+        </Link>
         <CheckoutForm />
         <Footer />
       </div>
