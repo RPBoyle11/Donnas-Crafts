@@ -3,7 +3,6 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import myObject, { removeFromCart } from '../actions';
 import { Link } from 'react-router-dom';
-import Nav from './Nav';
 import Footer from './Footer';
 import '../styles/Cart.css';
 
@@ -23,7 +22,6 @@ class Cart extends Component {
 
   render() {
     let cart = this.props.cart
-
     const itemList = cart.map(item => (
       <div className='item' key={item.id}>
         <img src={item.img} alt=''></img>
@@ -63,7 +61,7 @@ class Cart extends Component {
     if (this.props.cart.length === 0) {
       return (
         <div className="App">
-          <Nav />
+          {/* <Nav /> */}
           <div className='shopping-cart-header'>
             <p>Shopping Cart - Please review your items before continuing with purchase.</p>
           </div>
@@ -87,7 +85,7 @@ class Cart extends Component {
     } else {
       return (
         <div className="App">
-          <Nav />
+          {/* <Nav /> */}
           <div className='shopping-cart-header'>
             <p>Shopping Cart - Please review your items before continuing with purchase.</p>
           </div>

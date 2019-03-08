@@ -1,21 +1,29 @@
 .social-media-links {
   margin: 0;
-  padding: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 13px;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
 
+footer p {
+  text-align: center; 
+  font-size: 14px;
+  padding: 3px;
+}
+
+@media only screen and (min-width: 600px) {
+  .social-media-links {
+    font-size: 16px;
+  }
+}
+
 footer {
   border-top: 1px lightgray solid;
   margin-top: 15px;
-}
-
-footer h2 {
-  text-align: center;
-}
-footer p {
-  text-align: center; 
+  width: 100%;
 }
 
 .footer-links {

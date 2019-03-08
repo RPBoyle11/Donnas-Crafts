@@ -1,16 +1,90 @@
+.intro-div {
+  display: flex;
+  background-image: url('../images/yarn-and-pencils.jpg');
+  height: 642px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+.title {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 320px;
+  color: rgba(4, 26, 3, 0.801);
+  margin-top: 85px;
+}
+
+/* Option 6 */
+/* .intro-div {
+  display: flex;
+  background-image: url('../images/wreath.jpg');
+  height: 642px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.intro-div h1 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.801);
+  margin-top: 85px;
+} */
+
+/* Option 7 */
+/* .intro-div {
+  display: flex;
+  background-image: url('../images/yarn-and-tools.jpg');
+  height: 642px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.829);
+  margin-top: 85px;
+  max-width: 320px;
+
+} */
+
+@media only screen and (min-width: 978px) {
+  .title {
+    margin-top: 60px;
+    max-width: 400px;
+    font-size: 40px;
+  }
+}
+
 .title-anchor {
   text-decoration: none;
   color: black;
 }
 
-.intro-header {
-  margin:0;
+.about-me {
+  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
   padding: 5px;
   font-size: 12px;
   text-align: center;
   border: black 1px solid;
+  background: whitesmoke;
+  box-shadow: 0 20px 80px 0 rgba(0,0,0,.45);
 }
 
-.item-list {
-  width: 100%;
+.welcome {
+  text-align: center;
 }
