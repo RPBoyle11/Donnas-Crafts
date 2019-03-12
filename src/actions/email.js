@@ -1,29 +1,15 @@
 import { API_BASE_URL } from "../config";
-// import { normalizeResponseErrors } from "./utils";
-
-export const CONFIRM_EMAIL_REQUEST = 'CONFIRM_EMAIL_REQUEST';
-export const confirmEmailRequest = () => ({
-  type: CONFIRM_EMAIL_REQUEST
-});
-
-export const CONFIRM_EMAIL_SUCCESS = 'CONFIRM_EMAIL_SUCCESS';
-export const confirmEmailSuccess = () => ({
-  type: CONFIRM_EMAIL_SUCCESS
-});
-export const CONFIRM_EMAIL_ERROR = 'CONFIRM_EMAIL_ERROR';
-export const confirmEmailError = err => ({
-  type: CONFIRM_EMAIL_ERROR,
-  err
-});
 
 function sendConfirmationEmail(emailInfo) {
-  // const email = getState().auth.currentUser.email;
   console.log('Sending email confirmation');
   console.log('emailInfo from sending function >>>>', emailInfo);
 
   return fetch(`${API_BASE_URL}/email`, {
     method: 'POST',
-    headers: {'Content-Type': 'application/json'},
+    headers: {
+      'Content-Type': 'application/json',
+      accept: 'application/json'
+    },
     body: JSON.stringify({
       email: emailInfo.email,
       firstName: emailInfo.firstName,
@@ -32,6 +18,7 @@ function sendConfirmationEmail(emailInfo) {
       orderDetails: emailInfo.orderDetails
     })
   })
+  .then(res => res.json())
   .catch(err => console.log(err));
 };
 

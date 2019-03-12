@@ -26,13 +26,13 @@ class CheckoutForm extends Component {
     let emailInfo = this.state
     console.log(emailInfo);
 
-    this.setState({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      orderDetails: ''
-    })
+    // this.setState({
+    //   firstName: '',
+    //   lastName: '',
+    //   email: '',
+    //   phone: '',
+    //   orderDetails: ''
+    // })
 
     sendConfirmationEmail(emailInfo);
     
