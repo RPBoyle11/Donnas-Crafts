@@ -13,7 +13,19 @@ https://github.com/thinkful-ei26/RP-DCaC-server
 ### Features:
 1. User can search through all of the available items that the store has to offer.
 2. User can add items to a shopping cart so that you can keep track of all the items you wish to buy.
-3. User can checkout on this site and pay with either Paypal now, or Venmo later (items will not be sent to owners until payment has been received)
+3. User can checkout on this site and get an email with information about how to pay with Venmo or PayPal (items will not be sent to owners until payment has been received).
+
+### Landing Page Screenshot:
+<img src='./src/images/LandingPage.png' alt='Landing Page Screenshot' width='300px'/>
+
+### Shopping Cart Page Screenshot:
+<img src='./src/images/ShoppingCart.png' alt='Shopping Cart Screenshot' width='300px'/>
+
+### Checkout Page Screenshot:
+<img src='./src/images/CheckoutForm.png' alt='Checkout Form Screenshot' width='300px'/>
+
+### Confirmation Email After Purchase Screenshot:
+<img src='./src/images/Email.png' alt='Confirmation Email Screenshot' width='300px'/>
 
 ### Technical Stack:
 - React for Frontend
