@@ -9,7 +9,7 @@ class ShoppingCart extends Component {
     return (
       <div className='shopping-cart-link-container'>
         <Link className='cart-link' to='/shopping-cart'>
-          Shopping Cart
+          Shopping Cart ({this.props.cart.length})
         </Link>
       </div>  
     )
@@ -18,7 +18,7 @@ class ShoppingCart extends Component {
 
 const mapStateToProps = state => {
   return {
-    
+    cart: state.itemReducer.cart
   }
 }
 

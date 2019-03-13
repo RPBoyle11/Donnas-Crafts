@@ -9,30 +9,17 @@ class CheckoutForm extends Component {
     lastName: '',
     email: '',
     phone: '',
-    orderDetails: 'These are the order details'
+    orderDetails: this.props.cart
   }
 
   handleSubmit(e) {
-    //when form is submit it will send an email with all of the information to rpboyle11@yahoo.com
+    //when form is submit it will send an email with all of the information to donnascraftsncreations@gmail.com
     e.preventDefault();
     console.log('HANDLE SUBMIT WORKED!!!!!')
     console.log(this.state);
-
-    // if (this.checkoutList) {
-    //   console.log(this.checkoutList);
-    //   this.setState({orderDetails: this.checkoutList});
-    // }
     
     let emailInfo = this.state
     console.log(emailInfo);
-
-    // this.setState({
-    //   firstName: '',
-    //   lastName: '',
-    //   email: '',
-    //   phone: '',
-    //   orderDetails: ''
-    // })
 
     sendConfirmationEmail(emailInfo);
     
@@ -41,12 +28,13 @@ class CheckoutForm extends Component {
   render() {
     let cart = this.props.cart;
 
-    const checkoutList = cart.map(item => (
-      <p className='checkout-items'>{item.title}
+    let checkoutList = cart.map(item => (
+    <p className='checkout-items'>{item.title}
         <span className='item-quantity'>   1x </span>
         <span className='checkout-items-price'> ${item.price}</span>
       </p>
-    ))
+      )
+    )
 
     function sum(a, b){
       return a + b
@@ -85,9 +73,9 @@ class CheckoutForm extends Component {
             <p className='checkout-total'>Total Price: ${cartPrice}</p>
             </div>
           </div>
-          <div className='order-submit-button'>
-            <button type='submit'>Submit Order</button>
-          </div>
+        </div>
+        <div className='order-submit-button'>
+          <button type='submit'>Submit Order</button>
         </div>
       </form>
     )
