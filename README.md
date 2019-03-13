@@ -16,16 +16,16 @@ https://github.com/thinkful-ei26/RP-DCaC-server
 3. User can checkout on this site and get an email with information about how to pay with Venmo or PayPal (items will not be sent to owners until payment has been received).
 
 ### Landing Page Screenshot:
-<img src='./src/images/LandingPage.png' alt='Landing Page Screenshot' width='300px'/>
+<img src='./src/images/LandingPage.png' alt='Landing Page Screenshot' width='450px'/>
 
 ### Shopping Cart Page Screenshot:
-<img src='./src/images/ShoppingCart.png' alt='Shopping Cart Screenshot' width='300px'/>
+<img src='./src/images/ShoppingCart.png' alt='Shopping Cart Screenshot' width='450px'/>
 
 ### Checkout Page Screenshot:
-<img src='./src/images/CheckoutForm.png' alt='Checkout Form Screenshot' width='300px'/>
+<img src='./src/images/CheckoutForm.png' alt='Checkout Form Screenshot' width='450px'/>
 
 ### Confirmation Email After Purchase Screenshot:
-<img src='./src/images/Email.png' alt='Confirmation Email Screenshot' width='300px'/>
+<img src='./src/images/Email.png' alt='Confirmation Email Screenshot' width='450px'/>
 
 ### Technical Stack:
 - React for Frontend
