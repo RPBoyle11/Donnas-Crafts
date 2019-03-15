@@ -56,7 +56,7 @@ class CheckoutForm extends Component {
 
     return(
       <form onSubmit={e => this.handleSubmit(e)} className='checkout-form'>
-        <div className='input-fields'>
+        <section className='input-fields'>
           <label>First Name</label>
           <input type='text' placeholder='First Name' onChange={e => {e.preventDefault(); this.setState({firstName: e.target.value})}}></input><br/>
           <label>Last Name</label>
@@ -73,10 +73,8 @@ class CheckoutForm extends Component {
             <p className='checkout-total'>Total Price: ${cartPrice}</p>
             </div>
           </div>
-        </div>
-        <div className='order-submit-button'>
-          <button type='submit'>Submit Order</button>
-        </div>
+        </section>
+        <button className='order-submit-button' type='submit'>Submit Order</button>
       </form>
     )
   }

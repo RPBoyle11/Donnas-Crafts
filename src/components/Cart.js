@@ -68,17 +68,17 @@ class Cart extends Component {
                 className='continue-shopping-link'>BACK TO SHOPPING
             </Link>
           </div>
-          <div className='shopping-cart-header'>
+          <section className='shopping-cart-header'>
             <p className='cart-page-name'>Shopping Cart</p>
             <p className='review-purchase'>Please review your items before continuing with purchase.</p>
-          </div>
-          <div className='shopping-cart-body'>
+          </section>
+          <section className='shopping-cart-body'>
             <div className='cart-details'>
               <p className='number-of-items'>Your Cart - 0 Items</p>
               <p className='total-price'>Subtotal: $0.00</p>
             </div>
               <p className='no-items-p'>There are no items in your cart.</p>
-          </div>
+          </section>
           <Footer />
         </div>
       )
@@ -92,24 +92,24 @@ class Cart extends Component {
               className='continue-shopping-link'>BACK TO SHOPPING
             </Link>
           </div>
-          <div className='shopping-cart-header'>
+          <section className='shopping-cart-header'>
             <p className='cart-page-name'>Shopping Cart</p>
             <p className='review-purchase'>Please review your items before continuing with purchase.</p>
-          </div>
-          <div className='cart-details'>
+          </section>
+          <section className='cart-details'>
             <p className='number-of-items'>Your Cart - {this.props.cart.length} Item(s)</p>
             <p className='total-price'>Subtotal: $ {cartPrice}</p>
-          </div>
-            <div className='checkout-box'>
-              <span className='checkout-items-title'>Items</span>
+          </section>
+            <section className='checkout-box'>
+              <h2 className='checkout-items-title'>Items</h2>
               <div className='checkout-items-details'>
                 {checkoutList}
                 <p className='checkout-total'>Total Price: ${cartPrice}</p>
               </div>
               <Link to='/checkout'>
-                <button className='checkout-button'>Checkout</button>
+                <button type='button' className='checkout-button'>Checkout</button>
               </Link>
-            </div>
+            </section>
             <ul className='cart-list'>
               {itemList}
             </ul>
