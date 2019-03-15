@@ -9,7 +9,7 @@ export default function App (props) {
     return (
         <Router>
             <div className="app">
-                <main>
+                <main role='main'>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/shopping-cart" component={Cart} />
                     <Route exact path="/account-info" component={AccountInfo} />

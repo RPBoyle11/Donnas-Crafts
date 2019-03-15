@@ -57,14 +57,14 @@ class CheckoutForm extends Component {
     return(
       <form onSubmit={e => this.handleSubmit(e)} className='checkout-form'>
         <section className='input-fields'>
-          <label>First Name</label>
-          <input type='text' placeholder='First Name' onChange={e => {e.preventDefault(); this.setState({firstName: e.target.value})}}></input><br/>
-          <label>Last Name</label>
-          <input type='text' placeholder='Last Name' onChange={e => {e.preventDefault(); this.setState({lastName: e.target.value})}}></input><br/>
-          <label>Email</label>
-          <input type='email' placeholder='Email' onChange={e => {e.preventDefault(); this.setState({email: e.target.value})}}></input><br/>
-          <label>Phone Number</label>
-          <input type='tel' placeholder='555-555-5555' onChange={e => {e.preventDefault(); this.setState({phone: e.target.value})}}></input><br/>
+          <label for='FirstName'>First Name</label>
+          <input id='FirstName' type='text' placeholder='First Name' onChange={e => {e.preventDefault(); this.setState({firstName: e.target.value})}}></input><br/>
+          <label for='LastName'>Last Name</label>
+          <input type='text' id='LastName' placeholder='Last Name' onChange={e => {e.preventDefault(); this.setState({lastName: e.target.value})}}></input><br/>
+          <label for='email'>Email</label>
+          <input type='email' id='email' placeholder='Email' onChange={e => {e.preventDefault(); this.setState({email: e.target.value})}}></input><br/>
+          <label for='phone'>Phone Number</label>
+          <input type='tel' id='phone' placeholder='555-555-5555' onChange={e => {e.preventDefault(); this.setState({phone: e.target.value})}}></input><br/>
           <label>Order Details</label>
           <div className='order-details-container'>
             <span className='checkout-items-title'>Items</span>

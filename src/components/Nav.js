@@ -7,7 +7,7 @@ import '../styles/Nav.css';
 
 export default function Nav() {
     return (
-          <nav className="App-header">
+          <nav role='navigation' className="App-header">
             <Menu />
             {/* <Search /> */}
             {/* <Account /> */}

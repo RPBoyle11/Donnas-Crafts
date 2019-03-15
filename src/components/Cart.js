@@ -24,7 +24,7 @@ class Cart extends Component {
     let cart = this.props.cart
     const itemList = cart.map(item => (
       <li className='cart-item' key={item.id}>
-        <img src={item.img} alt='' className='cart-item-img'></img>
+        <img src={item.img} alt={item.title} className='cart-item-img'></img>
         <p className='cart-item-title'>{item.title}</p>
         <p className='cart-item-price'>Price: ${item.price}</p>
         <div className='cart-item-buttons'>
@@ -61,7 +61,7 @@ class Cart extends Component {
     if (this.props.cart.length === 0) {
       return (
         <div className="cart-page">
-          <header>Donna's Crafts 'N Creations</header>
+          <header role='banner'>Donna's Crafts 'N Creations</header>
           <div className='continue-shopping'>
             <Link 
                 to='/'
@@ -85,7 +85,7 @@ class Cart extends Component {
     } else {
       return (
         <div className="cart-page">
-          <header>Donna's Crafts 'N Creations</header>
+          <header role='banner'>Donna's Crafts 'N Creations</header>
           <div className='continue-shopping'>
             <Link 
               to='/'

@@ -17,7 +17,7 @@ class Menu extends Component {
   render() {
     return (
     <div className='menu-container'>
-      <select className='menu-dropdown' onChange={(e)=>this.handleSelection(e)} aria-controls='craftCategories'>
+      <select className='menu-dropdown' onChange={(e)=>this.handleSelection(e)} aria-controls='homeItems'>
         <option value='menu'>Categories</option>
         <option value='holidays' disabled>Shop by Holiday</option>
         <option value='Christmas' >Christmas</option>

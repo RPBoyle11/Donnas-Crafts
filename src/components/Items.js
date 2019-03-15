@@ -32,7 +32,7 @@ export class Items extends Component {
   const filtered = this.props.filter;
   const filterList = filtered.map( (item) => (
     <li key={item.id} className='item'>
-      <img src={item.img} alt='' className='item-img'></img>
+      <img src={item.img} alt={item.title} className='item-img'></img>
       <h1 className='item-title'>{item.title}</h1>
       <h2 className='item-price'>Price: ${item.price}</h2>
       <div className='item-buttons'>
@@ -45,7 +45,7 @@ export class Items extends Component {
 
   const itemList = items.map( (item) => (
     <li key={item.id} className='item'>
-      <img src={item.img} alt='' className='item-img'></img>
+      <img src={item.img} alt={item.title} className='item-img'></img>
       <p className='item-title'>{item.title}</p>
       <p className='item-price'>Price: ${item.price}</p>
       <div className='item-buttons'>
