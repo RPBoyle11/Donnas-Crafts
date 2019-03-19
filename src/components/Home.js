@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
  
     return (
-        <div className="App">
+        <div className="Home">
           <Nav />
           <section className='intro-div'>
             <h1 className='title'>Donna's Crafts 'N Creations</h1>
